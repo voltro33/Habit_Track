@@ -92,7 +92,24 @@ function createHabit() {
     let streak = parseInt(document.getElementById("Streak").value, 10);
     let resetEvery = parseInt(document.getElementById("resetEvery").value, 10);
 
+    if (!name || isNaN(total) || isNaN(streak) || isNaN(resetEvery)) {
+        alert("Please fill in all fields");
+        return;
+    }
+
+    if (Math.min(total, Math.min(streak, resetEvery) <0)) {
+        alert("Please don't put a negative number");
+        return;
+    }
+
+    if (streak > total) {
+        alert("You can't have a streak number higher than the total number of days attempted.");
+        return;
+    }
+
+
     let today = new Date();
+    today.setDate(today.getDate() - 1);
     let newHabit = [name, streak, total, today.toISOString(), resetEvery];
     habits.push(newHabit);
     localStorage.setItem("habits", JSON.stringify(habits));
