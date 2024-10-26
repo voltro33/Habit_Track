@@ -116,6 +116,14 @@ function createHabit() {
 
     updateTable();
     updateAdVisibility();
+
+    document.getElementById("counterValue").innerText = habits.length;
+
+    document.getElementById("Name").value = '';
+    document.getElementById("Total").value = '';
+    document.getElementById("Streak").value = '';
+    document.getElementById("resetEvery").value = '';
+    location.reload();
 }
 
 function updateTable() {
