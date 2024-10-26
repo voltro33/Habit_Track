@@ -1,0 +1,111 @@
+.ad-container {
+    background-color: #f0f8ff;
+    border: 2px solid #4a90e2;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.ad-container h2 {
+    color: #4a90e2;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.ad-container p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    color: #333;
+    padding: 20px;
+}
+h1 {
+    color: #4a90e2;
+    font-size: 36px;
+}
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+form label {
+    color: #4a90e2;
+    font-weight: bold;
+}
+form input {
+    padding: 5px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    width: 60px;
+}
+form button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+form button:hover {
+    background-color: #357abd;
+}
+.counter-display {
+    font-size: 28px;
+    color: #4a90e2;
+    margin: 20px 0;
+}
+.counter-buttons button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.counter-buttons button:hover {
+    background-color: #357abd;
+}
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+table th, table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+table th {
+    background-color: #4a90e2;
+    color: white;
+}
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+table td button {
+    padding: 5px 10px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+table td button:hover {
+    background-color: #357abd;
+}

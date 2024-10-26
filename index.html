@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Habit Tracker App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+</head>
+<body>
+
+    <h1>Habit Tracker</h1>
+
+    <form onsubmit="createHabit(); return false;">
+        <label for="Name">Habit:</label>
+        <input id="Name" type="text">
+
+        <label for="Total">Total:</label>
+        <input id="Total" type="number" min="0">
+
+        <label for="Streak">Streak:</label>
+        <input id="Streak" type="number" min="0">
+
+        <label for="resetEvery">Reset Every (days):</label>
+        <input id="resetEvery" type="number" min="1"> 
+
+        <button type="submit">Add Habit</button>
+    </form>
+
+    <div class="counter-display">
+        <p>Current Habit Count: <span id="counterValue">0</span></p>
+    </div>
+
+    <div class="counter-buttons">
+        <button onclick="incrementCounter()">Add Example Habit</button>
+        <button onclick="decrementCounter()">Remove Habit</button>
+    </div>
+
+    <table id="tableId">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Streak</th>
+                <th>Total</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyId"></tbody>
+    </table>
+
+    <div class="ad-container" id="adContainer" style="display: none;">
+        <h2>Build Better Habits!</h2>
+        <p>While it takes about <strong>66 days</strong> to form a habit, most people don’t realize how close they are to success because they don’t track their progress. 
+            This simple app accomplishes that by providing a clear visual of your journey, showing you exactly how close you are to the finish line.</p>
+    
+        <p><strong>Total</strong> = How many total times you have completed a goal</p>
+        <p><strong>Streak</strong> = How many continuous days you have completed a goal</p>
+        <p><strong>Reset Every (days)</strong> = Your streak resets if you miss this many days.</p>
+    </div>
+      
+    <script src="script.js"></script> 
+</body>
+</html>
