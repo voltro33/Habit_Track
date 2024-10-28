@@ -40,13 +40,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function markComplete(item, index) {
     let lastReset = new Date(item[3]);
-    let resetEvery = parseInt(item[4], 10);
+    let resetInterval = item[4];
     let today = new Date();
 
-    let daysSinceLastCompletion = (today - lastReset) / (1000 * 60 * 60 * 24);
+    today.setHours(0, 0, 0, 0);
+    lastReset.setHours(0, 0, 0, 0);
 
-    if (daysSinceLastCompletion >= resetEvery) {
-        item[2] = 0;
+    let daysSinceLastReset = (today - lastReset) / (1000 * 60 * 60 * 24);
+
+    if (daysSinceLastReset > resetInterval && daysSinceLastReset > 1) {
+        item[1] = 0;
     }
 
     item[1]++;
@@ -58,10 +61,12 @@ function markComplete(item, index) {
     location.reload();
 }
 
+
+
 function incrementCounter() {
     let today = new Date();
     today.setDate(today.getDate() - 1);
-    let newHabit = ["Go to Gym", 1, 2, today.toISOString(), 7];
+    let newHabit = ["Go to Gym", 1, 2, today.toISOString(), 1];
     habits.push(newHabit);
     localStorage.setItem("habits", JSON.stringify(habits));
     document.getElementById("counterValue").innerText = habits.length;
